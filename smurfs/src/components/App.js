@@ -19,9 +19,14 @@ function App(props) {
 	};
 
 	const handleSubmit = (event) => {
-		console.log(fields);
 		event.preventDefault();
+		console.log(fields);
 		props.addSmurf(fields);
+		setFields({
+			name   : '',
+			age    : '',
+			height : '',
+		});
 	};
 
 	return (
