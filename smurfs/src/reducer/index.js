@@ -39,7 +39,7 @@ const reducer = (state = initialState, action) => {
 				...state,
 				isFetching : false,
 				error      : '',
-				Smurfs     : [ ...state.Smurfs, action.payload ],
+				Smurfs     : action.payload,
 			};
 		case SMURF_FAIL:
 			return {
@@ -47,7 +47,6 @@ const reducer = (state = initialState, action) => {
 				error      : action.payload,
 				isFetching : false,
 			};
-
 		default:
 			return state;
 	}
